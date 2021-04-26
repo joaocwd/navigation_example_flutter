@@ -39,6 +39,16 @@ class MyApp extends StatelessWidget {
         AppRoutes.CATEGORY_WORDS: (ctx) => CategoriesWordsScreen(),
         AppRoutes.WORD_DETAILS: (ctx) => WordDetailScreen(),
       },
+
+      // MÉTODOS DE PREVENÇÃO DE ROTAS (onGenerateRoute, onUnknownRoute)
+      onGenerateRoute: (settings) {
+        if (settings.name == '/this-route') {
+          return MaterialPageRoute(builder: (_) => CategoriesScreen());
+        }
+      },
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(builder: (_) => CategoriesScreen());
+      },
     );
   }
 }
