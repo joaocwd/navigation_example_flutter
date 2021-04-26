@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:navigation_example_flutter/models/category.dart';
-import 'package:navigation_example_flutter/screens/categories_words_screen.dart';
+import 'package:navigation_example_flutter/utils/app_routes.dart';
 
 class CategoryItem extends StatelessWidget {
   final Category category;
@@ -19,7 +19,7 @@ class CategoryItem extends StatelessWidget {
 
     // Nova Rota nomeada transportando os argumentos
     Navigator.of(context).pushNamed(
-      '/categories-words',
+      AppRoutes.CATEGORYWORDS,
       arguments: category,
     );
   }
