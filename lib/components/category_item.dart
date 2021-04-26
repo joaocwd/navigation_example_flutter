@@ -8,12 +8,19 @@ class CategoryItem extends StatelessWidget {
   CategoryItem(this.category);
 
   void _selectCategory(BuildContext context) {
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (_) {
-          return CategoriesWordsScreen(category);
-        },
-      ),
+    /* ANTIGA ROTA */
+    // Navigator.of(context).push(
+    //   MaterialPageRoute(
+    //     builder: (_) {
+    //       return CategoriesWordsScreen(category);
+    //     },
+    //   ),
+    // );
+
+    // Nova Rota nomeada transportando os argumentos
+    Navigator.of(context).pushNamed(
+      '/categories-words',
+      arguments: category,
     );
   }
 
