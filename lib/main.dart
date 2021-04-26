@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:navigation_example_flutter/screens/categories_screen.dart';
 import 'package:navigation_example_flutter/screens/categories_words_screen.dart';
+import 'package:navigation_example_flutter/screens/word_detail_screen.dart';
 import 'package:navigation_example_flutter/utils/app_routes.dart';
 import 'package:navigation_example_flutter/utils/custom_route.dart';
 
@@ -35,7 +36,8 @@ class MyApp extends StatelessWidget {
       // home: CategoriesScreen(),
       routes: {
         AppRoutes.HOME: (ctx) => CategoriesScreen(),
-        AppRoutes.CATEGORYWORDS: (ctx) => CategoriesWordsScreen(),
+        AppRoutes.CATEGORY_WORDS: (ctx) => CategoriesWordsScreen(),
+        AppRoutes.WORD_DETAILS: (ctx) => WordDetailScreen(),
       },
     );
   }

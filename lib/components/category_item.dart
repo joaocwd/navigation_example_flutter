@@ -19,7 +19,7 @@ class CategoryItem extends StatelessWidget {
 
     // Nova Rota nomeada transportando os argumentos
     Navigator.of(context).pushNamed(
-      AppRoutes.CATEGORYWORDS,
+      AppRoutes.CATEGORY_WORDS,
       arguments: category,
     );
   }
